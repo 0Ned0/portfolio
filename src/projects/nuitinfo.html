@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuit de l'Info | Eden Lorenzo</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-card"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;">
+        <div class="logo" style="font-weight: 700; font-size: 1.5rem;">EL.</div>
+        <ul style="display: flex; gap: 2rem;">
+            <li><a href="../index.html#home">Accueil</a></li>
+            <li><a href="../index.html#about">À propos</a></li>
+            <li><a href="../index.html#projects">Projets</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-page">
+        <div class="project-header">
+            <h1>Nuit de l'Info 2025</h1>
+            <p class="project-subtitle">Défi Web & Algorithmique (NIRD)</p>
+            <div class="project-meta">
+                <span class="meta-item"><strong>Contexte :</strong> Concours National Étudiant</span>
+                <span class="meta-item"><strong>Défi :</strong> Le Snake Caché</span>
+                <span class="meta-item"><strong>Durée :</strong> 1 Nuit (Coucher de soleil -> Lever)</span>
+                <span class="meta-item"><strong>Technologies :</strong> HTML5, JS, Algo Pathfinding</span>
+            </div>
+        </div>
+
+        <section class="project-section">
+            <h2>Contexte : Numérique Responsable</h2>
+            <p>
+                La Nuit de l'Info est une compétition nationale où des équipes d'étudiants doivent développer une
+                application web en une nuit.
+                L'édition 2025 portait sur la démarche <strong>NIRD (Numérique Inclusif, Responsable et
+                    Durable)</strong>.
+            </p>
+            <p>
+                L'objectif global était de créer une application ludique et éducative pour sensibiliser le public à
+                l'indépendance technologique et aux alternatives durables.
+            </p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <img src="../assets/Snake.png" alt="Algorithme du Snake" class="project-img">
+                <p class="img-caption">Visualisation de l'algorithme autonome jouant au Snake.</p>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Mon Défi : L'Algorithme du Snake</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Le Challenge</h3>
+                        <p>Le défi consistait à "Cacher un snake dans le site web". Pour le rendre original, j'ai décidé
+                            de ne pas simplement faire un jeu pour l'utilisateur, mais de créer une <strong>IA qui joue
+                                toute seule</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Implémentation</h3>
+                        <ul>
+                            <li>Développement du moteur du jeu Snake en JavaScript.</li>
+                            <li>Conception de l'algorithme de prise de décision (Pathfinding).</li>
+                            <li>Intégration de modes de difficulté variés.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Contribution Technique</h2>
+            <p>Mon travail s'est concentré sur la logique algorithmique et l'intégration web :</p>
+
+            <div class="tech-grid centered-cards">
+                <div class="tech-card">
+                    <h3>Algorithmique</h3>
+                    <ul>
+                        <li><strong>Pathfinding :</strong> Création d'une logique permettant au serpent de trouver la
+                            pomme tout en évitant sa queue et les murs.</li>
+                        <li><strong>Optimisation :</strong> Calcul en temps réel à chaque frame pour une fluidité
+                            maximale.</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li><strong>Canvas API :</strong> Rendu graphique du jeu dans un élément HTML5 logé dans le
+                            site.</li>
+                        <li><strong>Intégration :</strong> Communication avec le reste du site (Easter Egg caché).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight" style="text-align: center; margin-top: 40px;">
+                <p><strong>Voir le projet en live :</strong> <a
+                        href="https://webinfo.iutmontp.univ-montp2.fr/~trioleyren/ndi/index.html" target="_blank"
+                        style="color: var(--primary-color);">Accéder au site NDI</a></p>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Compétences Acquises</h2>
+            <ul class="feature-list">
+                <li>Développement d'algorithmes de jeu en temps réel.</li>
+                <li>Création d'Easter Eggs et de contenus interactifs cachés.</li>
+                <li>Travail en équipe sur un thème engagé (Numérique Responsable).</li>
+                <li>Gestion du sommeil et de la productivité nocturne !</li>
+            </ul>
+        </section>
+
+        <div class="project-footer">
+            <a href="../index.html#projects" class="btn btn-primary">← Retour aux projets</a>
+            <a href="../index.html#contact" class="btn" style="border: 1px solid var(--text-muted);">Me contacter</a>
+        </div>
+    </main>
+
+    <footer
+        style="padding: 2rem 0; text-align: center; color: var(--text-muted); border-top: 1px solid rgba(0, 243, 255, 0.1);">
+        <p>&copy; 2025 Eden Lorenzo. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>

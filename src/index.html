@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="js/include.js"></script>
+    <title>Eden Lorenzo | Portfolio</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-card"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;">
+        <div class="logo" style="font-weight: 700; font-size: 1.5rem;">EL.</div>
+        <ul style="display: flex; gap: 2rem;">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px;">
+        <div class="container hero-content animate-fade-in">
+            <h1 style="font-size: 4rem; margin-bottom: 1rem; line-height: 1.1;" class="glitch-text">
+                <span style="color: var(--primary-color);">Eden Lorenzo</span>
+            </h1>
+            <h2
+                style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 3px;">
+                Pentest & Cybersécurité
+            </h2>
+            <p
+                style="font-size: 1.5rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Étudiant en BUT Informatique (DACS) passionné par le développement et la sécurité offensive.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn" style="border: 1px solid var(--text-muted);">Me contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding: var(--spacing-xl) 0;">
+        <div class="container">
+            <h2 class="section-title">À Propos</h2>
+            <div class="glass-card" style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Mon Parcours</h3>
+                    <p style="margin-bottom: 1rem; color: var(--text-muted);">
+                        Je suis actuellement en 2ème année de BUT informatique à l’IUT de Montpellier-Sète,
+                        spécialisation DACS (Déploiement d’applications communicantes et sécurisées).
+                    </p>
+                    <p style="margin-bottom: 1rem; color: var(--text-muted);">
+                        Je souhaite me spécialiser dans la <strong>cybersécurité</strong> et plus précisément dans le
+                        <strong>pentest</strong>.
+                        À la suite de mon BUT, j'aimerais intégrer une école d'ingénieur axée sur la cybersécurité.
+                    </p>
+                    <div style="margin-top: 2rem;">
+                        <h4 style="margin-bottom: 0.5rem;">Compétences</h4>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <span class="skill-tag"
+                                style="background: rgba(0, 243, 255, 0.1); border: 1px solid var(--primary-color); padding: 0.5rem 1rem; font-size: 0.9rem;">Cybersecurity</span>
+                            <span class="skill-tag"
+                                style="background: rgba(0, 243, 255, 0.1); border: 1px solid var(--primary-color); padding: 0.5rem 1rem; font-size: 0.9rem;">Pentest</span>
+                            <span class="skill-tag"
+                                style="background: rgba(0, 243, 255, 0.1); border: 1px solid var(--primary-color); padding: 0.5rem 1rem; font-size: 0.9rem;">Java/JavaFX</span>
+                            <span class="skill-tag"
+                                style="background: rgba(0, 243, 255, 0.1); border: 1px solid var(--primary-color); padding: 0.5rem 1rem; font-size: 0.9rem;">Python</span>
+                            <span class="skill-tag"
+                                style="background: rgba(0, 243, 255, 0.1); border: 1px solid var(--primary-color); padding: 0.5rem 1rem; font-size: 0.9rem;">Web
+                                Dev</span>
+                        </div>
+                        <a href="assets/cv.pdf" class="btn btn-primary" download>Télécharger mon CV</a>
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 300px; text-align: center;">
+                    <div
+                        style="width: 300px; height: 300px; background: url('assets/NDI-2025.jpg') center/cover; border-radius: 50%; margin: 0 auto; border: 3px solid var(--primary-color); box-shadow: 0 0 20px var(--primary-color);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" style="padding: var(--spacing-xl) 0; background: var(--background-light);">
+        <div class="container">
+            <h2 class="section-title">Mes Réalisations</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+                <!-- Project Card 1: Pokemon TCG -->
+                <article class="glass-card project-card"
+                    style="padding: 0; overflow: hidden; transition: transform 0.3s ease;">
+                    <div
+                        style="height: 200px; background: url('assets/debut_de_partie.png') center/cover; display: flex; align-items: center; justify-content: center;">
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Pokémon TCG</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">Interface graphique JavaFX pour un jeu
+                            de cartes.</p>
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                            <span style="font-size: 0.8rem; color: var(--primary-color);">Java</span>
+                            <span style="font-size: 0.8rem; color: var(--primary-color);">IHM</span>
+                        </div>
+                        <a href="projects/pokemontcg.html" class="btn btn-primary"
+                            style="width: 100%; text-align: center;">Voir le détail</a>
+                    </div>
+                </article>
+
+                <!-- Project Card 2: Code Game Jam -->
+                <article class="glass-card project-card"
+                    style="padding: 0; overflow: hidden; transition: transform 0.3s ease;">
+                    <div
+                        style="height: 200px; background: url('assets/BASS_FIGHT.png') center/cover; display: flex; align-items: center; justify-content: center;">
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Code Game Jam</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">Jeu vidéo réalisé en 38h sur Game
+                            Maker.</p>
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                            <span style="font-size: 0.8rem; color: var(--primary-color);">GameDev</span>
+                            <span style="font-size: 0.8rem; color: var(--primary-color);">Hackathon</span>
+                        </div>
+                        <a href="projects/gamejam.html" class="btn btn-primary"
+                            style="width: 100%; text-align: center;">Voir le détail</a>
+                    </div>
+                </article>
+
+                <!-- Project Card 3: Nuit de l'Info -->
+                <article class="glass-card project-card"
+                    style="padding: 0; overflow: hidden; transition: transform 0.3s ease;">
+                    <div
+                        style="height: 200px; background: url('assets/Snake.png') center/cover; display: flex; align-items: center; justify-content: center;">
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Nuit de l'Info</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">Algorithme de Snake autonome pour le
+                            défi NIRD.</p>
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                            <span style="font-size: 0.8rem; color: var(--primary-color);">Web</span>
+                            <span style="font-size: 0.8rem; color: var(--primary-color);">Algo</span>
+                        </div>
+                        <a href="projects/nuitinfo.html" class="btn btn-primary"
+                            style="width: 100%; text-align: center;">Voir le détail</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: var(--spacing-xl) 0;">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="glass-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-muted);">
+                    Intéressé par mon profil ou mes projets ? N'hésitez pas à me contacter !
+                </p>
+
+                <div style="margin-bottom: 2rem; text-align: center;">
+                    <p style="font-size: 1.3rem; margin-bottom: 0.5rem;">
+                        <span style="color: var(--primary-color);">Email :</span>
+                        <a href="mailto:eden.lorenzo@hotmail.com"
+                            style="color: var(--text-main); text-decoration: underline;">eden.lorenzo@hotmail.com</a>
+                    </p>
+                </div>
+
+                <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <a href="https://www.linkedin.com/in/eden-lorenzo-897b47165/" target="_blank" class="btn"
+                        style="border: 1px solid var(--primary-color); display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">💼</span> Eden Lorenzo
+                    </a>
+                    <a href="https://github.com/0Ned0" target="_blank" class="btn"
+                        style="border: 1px solid var(--primary-color); display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">🐙</span> 0Ned0
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        style="padding: 2rem 0; text-align: center; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2025 Eden Lorenzo. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
