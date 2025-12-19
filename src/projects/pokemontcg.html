@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon TCG | Eden Lorenzo</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-card"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;">
+        <div class="logo" style="font-weight: 700; font-size: 1.5rem;">EL.</div>
+        <ul style="display: flex; gap: 2rem;">
+            <li><a href="../index.html#home">Accueil</a></li>
+            <li><a href="../index.html#about">À propos</a></li>
+            <li><a href="../index.html#projects">Projets</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-page">
+        <div class="project-header">
+            <h1>Pokémon TCG</h1>
+            <p class="project-subtitle">Interface Graphique JavaFX & IHM</p>
+            <div class="project-meta">
+                <span class="meta-item"><strong>Contexte :</strong> SAE S2.01 (IUT Montpellier)</span>
+                <span class="meta-item"><strong>Équipe :</strong> Binôme (Eden L., Gabriel S.)</span>
+                <span class="meta-item"><strong>Durée :</strong> 3 semaines (Mai-Juin 2024)</span>
+                <span class="meta-item"><strong>Technologies :</strong> JavaFX, SceneBuilder, Java, Git</span>
+            </div>
+        </div>
+
+        <section class="project-section">
+            <h2>Contexte du projet</h2>
+            <p>
+                Dans le cadre de la SAE S2.01, ce projet constituait la phase 2 d'un module de développement.
+                Après avoir implémenté la logique du jeu de cartes Pokémon en Java (Phase 1), l'objectif était de
+                concevoir
+                et réaliser une <strong>Interface Homme-Machine (IHM)</strong> complète et ergonomique en utilisant
+                <strong>JavaFX</strong> et <strong>SceneBuilder</strong>.
+            </p>
+            <p>
+                Nous avions 3 semaines pour transformer un moteur de jeu textuel en une application graphique jouable et
+                visuellement cohérente.
+            </p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <img src="../assets/debut_de_partie.png" alt="Plateau de jeu Pokémon TCG" class="project-img">
+                <p class="img-caption">Vue globale du plateau de jeu au début d'une partie.</p>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Chronologie & Développement</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Planification & Organisation</h3>
+                        <span class="timeline-date">Semaine 1</span>
+                        <p>Réflexion sur l'architecture MVC et l'agencement des fichiers FXML. Gestion des premiers
+                            conflits Git et mise en place des bonnes pratiques de versionnement.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Implémentation Core IHM</h3>
+                        <span class="timeline-date">Semaine 2</span>
+                        <ul>
+                            <li>Création des vues principales (Plateau, Main, Défausse).</li>
+                            <li>Liaison des données JavaFX (Bindings) pour les updates en temps réel.</li>
+                            <li>Intégration des images des cartes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Polish & Interactions Avancées</h3>
+                        <span class="timeline-date">Semaine 3</span>
+                        <ul>
+                            <li>Développement du système de zoom au survol.</li>
+                            <li>Gestion des Events Listeners pour les énergies et PV.</li>
+                            <li>Sprint final en présentiel pour résoudre les bugs d'intégration.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Contribution Individuelle</h2>
+            <p>En tant que binôme actif, j'ai pris la responsabilité de plusieurs modules critiques de l'expérience
+                utilisateur :</p>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>Interactions UX</h3>
+                    <ul>
+                        <li><strong>Zoom Dynamique :</strong> Implémentation de l'agrandissement des cartes au survol de
+                            la souris pour permettre la lecture des descriptions.</li>
+                        <li><strong>Feedback Visuel :</strong> Système de mise à jour instantanée des PV et des Énergies
+                            attachées via des <code>EventListeners</code>.</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Visuels & Assets</h3>
+                    <ul>
+                        <li><strong>Gestion des Images :</strong> Intégration et redimensionnement dynamique des assets
+                            graphiques.</li>
+                        <li><strong>Layout FXML :</strong> Design de la vue du joueur et de la zone de jeu active.</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Collaboration</h3>
+                    <ul>
+                        <li><strong>Workflow Git :</strong> Résolution des conflits de fusion sur les fichiers FXML.
+                        </li>
+                        <li><strong>Communication :</strong> Feedback régulier et sessions de pair-programming pour
+                            déboguer.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <img src="../assets/salameche_energie.png" alt="Zoom sur une carte avec énergies" class="project-img"
+                    style="max-width: 600px;">
+                <p class="img-caption">Détail d'une carte Salamèche avec affichage dynamique des énergies et zoom au
+                    survol.</p>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Compétences Acquises</h2>
+            <div class="highlight">
+                <p>Ce projet m'a permis de comprendre l'importance d'une séparation stricte entre la logique métier et
+                    la vue (MVC), ainsi que la puissance du mécanisme d'événements de JavaFX pour créer des interfaces
+                    réactives.</p>
+            </div>
+            <ul class="feature-list">
+                <li>Maîtrise de l'architecture MVC avec JavaFX.</li>
+                <li>Utilisation avancée de Git en équipe (branches, merge requests).</li>
+                <li>Design d'interface responsive et gestion des conteneurs (StackPane, HBox, etc.).</li>
+                <li>Collaboration efficace et répartition des tâches techniques.</li>
+            </ul>
+        </section>
+
+        <div class="project-footer">
+            <a href="../index.html#projects" class="btn btn-primary">← Retour aux projets</a>
+            <a href="../index.html#contact" class="btn" style="border: 1px solid var(--text-muted);">Me contacter</a>
+        </div>
+    </main>
+
+    <footer
+        style="padding: 2rem 0; text-align: center; color: var(--text-muted); border-top: 1px solid rgba(0, 243, 255, 0.1);">
+        <p>&copy; 2025 Eden Lorenzo. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
