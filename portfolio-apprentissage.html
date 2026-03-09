@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio d'Apprentissage | Eden Lorenzo</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-card"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;">
+        <div class="logo" style="font-weight: 700; font-size: 1.5rem;">EL.</div>
+        <ul style="display: flex; gap: 2rem;">
+            <li><a href="index.html#home">Accueil</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-page" style="padding-top: 120px;">
+        <div class="container">
+            <div class="project-header" style="text-align: center; margin-bottom: 4rem;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;" class="glitch-text">Portfolio d'Apprentissage</h1>
+                <p class="project-subtitle" style="font-size: 1.5rem; color: var(--secondary-color);">Référentiel de Compétences BUT Informatique (Parcours DACS)</p>
+            </div>
+
+            <section class="project-section">
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-muted); font-size: 1.1rem;">
+                    Ce portfolio présente mon auto-évaluation vis-à-vis des compétences du BUT Informatique, 
+                    spécifiquement pour les trois axes dont l'apprentissage s'arrête au niveau 2 dans le parcours DACS.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                    
+                    <!-- Compétence 4 -->
+                    <div class="glass-card competence-card" style="padding: 2rem;">
+                        <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Gérer</h2>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1.5rem;">Gérer des ressources informatiques</h3>
+                        <div class="level-indicator" style="margin-bottom: 1.5rem;">
+                            <span style="background: var(--primary-color); color: var(--background-dark); padding: 0.2rem 0.8rem; border-radius: 4px; font-weight: bold;">Niveau 2</span>
+                        </div>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                            Optimiser les ressources informatiques pour répondre aux besoins d'une organisation.
+                        </p>
+                        <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 1.6;">
+                            <li>Configuration de services réseaux</li>
+                            <li>Virtualisation et conteneurisation</li>
+                            <li>Surveillance et maintenance préventive</li>
+                        </ul>
+                    </div>
+
+                    <!-- Compétence 5 -->
+                    <div class="glass-card competence-card" style="padding: 2rem;">
+                        <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Conduire</h2>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1.5rem;">Conduire un projet</h3>
+                        <div class="level-indicator" style="margin-bottom: 1.5rem;">
+                            <span style="background: var(--primary-color); color: var(--background-dark); padding: 0.2rem 0.8rem; border-radius: 4px; font-weight: bold;">Niveau 2</span>
+                        </div>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                            Appréhender et manager les étapes d'un projet informatique au sein d'une équipe.
+                        </p>
+                        <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 1.6;">
+                            <li>Planification et suivi (Méthodes Agiles)</li>
+                            <li>Rédaction de documentations techniques</li>
+                            <li>Gestion des risques et des délais</li>
+                        </ul>
+                    </div>
+
+                    <!-- Compétence 6 -->
+                    <div class="glass-card competence-card" style="padding: 2rem;">
+                        <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Collaborer</h2>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1.5rem;">Collaborer au sein d'une équipe informatiques</h3>
+                        <div class="level-indicator" style="margin-bottom: 1.5rem;">
+                            <span style="background: var(--primary-color); color: var(--background-dark); padding: 0.2rem 0.8rem; border-radius: 4px; font-weight: bold;">Niveau 2</span>
+                        </div>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                            S'intégrer dans un environnement professionnel et contribuer au travail d'équipe.
+                        </p>
+                        <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 1.6;">
+                            <li>Communication technique efficace</li>
+                            <li>Utilisation d'outils collaboratifs (Git, Discord, Trello)</li>
+                            <li>Pair-programming et revue de code</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="project-footer" style="margin-top: 5rem; text-align: center;">
+                <a href="index.html#projects" class="btn btn-primary">← Retour aux projets</a>
+            </div>
+        </div>
+    </main>
+
+    <footer
+        style="padding: 2rem 0; text-align: center; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2025 Eden Lorenzo. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
