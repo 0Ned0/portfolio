@@ -6,6 +6,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio d'Apprentissage | Eden Lorenzo</title>
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .competence-section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 100px;
+        }
+
+        .competence-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .competence-number {
+            background: var(--primary-color);
+            color: var(--background-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .competence-title {
+            font-size: 1.6rem;
+        }
+
+        .niveau-badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--background-dark);
+            padding: 0.2rem 0.8rem;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .niveau-badge.majeure {
+            background: var(--secondary-color);
+        }
+
+        .ac-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .ac-table th,
+        .ac-table td {
+            text-align: left;
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .ac-table th {
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ac-table td {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .ac-id {
+            color: var(--primary-color);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .ce-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .ce-list li {
+            background: rgba(0, 243, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .ce-list li strong {
+            color: var(--primary-color);
+        }
+
+        .argumentation-card {
+            background: rgba(157, 78, 221, 0.08);
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 0 8px 8px 0;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .argumentation-card h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .argumentation-card p,
+        .argumentation-card li {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .argumentation-card ul {
+            padding-left: 1.2rem;
+        }
+
+        .resources-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.8rem;
+        }
+
+        .resource-tag {
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--primary-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--primary-color);
+        }
+
+        .competence-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .competence-nav a {
+            background: rgba(0, 243, 255, 0.08);
+            border: 1px solid var(--glass-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+        }
+
+        .competence-nav a:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .competence-nav a.minor {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .separator {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+            margin: 3rem 0;
+        }
+
+        .legend-box {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .legend-dot.majeure {
+            background: var(--secondary-color);
+        }
+
+        .legend-dot.mineure {
+            background: var(--primary-color);
+        }
+    </style>
 </head>
 
 <body>
@@ -24,76 +229,638 @@
 
     <main class="project-page" style="padding-top: 120px;">
         <div class="container">
-            <div class="project-header" style="text-align: center; margin-bottom: 4rem;">
-                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;" class="glitch-text">Portfolio d'Apprentissage</h1>
-                <p class="project-subtitle" style="font-size: 1.5rem; color: var(--secondary-color);">Référentiel de Compétences BUT Informatique (Parcours DACS)</p>
+
+            <!-- Header -->
+            <div class="project-header" style="text-align: center; margin-bottom: 2rem;">
+                <h1 style="font-size: 3rem; margin-bottom: 1rem;" class="glitch-text">Portfolio d'Apprentissage</h1>
+                <p class="project-subtitle"
+                    style="font-size: 1.3rem; color: var(--secondary-color); margin-bottom: 1rem;">
+                    Référentiel de Compétences — BUT Informatique (Parcours DACS)
+                </p>
+                <p style="color: var(--text-muted); max-width: 800px; margin: 0 auto 2rem; font-size: 1rem;">
+                    Cette page présente l'acquisition de mes compétences tout au long du BUT Informatique.
+                    En me spécialisant dans le parcours <strong>DACS</strong> (Déploiement d'applications communicantes
+                    et
+                    sécurisées),
+                    je conserve 3 compétences majeures (C1, C3, C6) et je valide au niveau 2 les compétences mineures
+                    (C2, C4, C5).
+                </p>
             </div>
 
-            <section class="project-section">
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-muted); font-size: 1.1rem;">
-                    Ce portfolio présente mon auto-évaluation vis-à-vis des compétences du BUT Informatique, 
-                    spécifiquement pour les trois axes dont l'apprentissage s'arrête au niveau 2 dans le parcours DACS.
+            <!-- Legend -->
+            <div class="legend-box">
+                <div class="legend-item">
+                    <div class="legend-dot majeure"></div>
+                    Compétence Majeure (poursuivie en année 3)
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot mineure"></div>
+                    Compétence Mineure (arrêtée au niveau 2)
+                </div>
+            </div>
+
+            <!-- Navigation rapide -->
+            <div class="competence-nav">
+                <a href="#c1">C1 — Réaliser</a>
+                <a href="#c2" class="minor">C2 — Optimiser</a>
+                <a href="#c3">C3 — Administrer</a>
+                <a href="#c4" class="minor">C4 — Gérer</a>
+                <a href="#c5" class="minor">C5 — Conduire</a>
+                <a href="#c6">C6 — Collaborer</a>
+            </div>
+
+            <!-- ================================================================ -->
+            <!--                COMPÉTENCE 1 : RÉALISER (MAJEURE)                 -->
+            <!-- ================================================================ -->
+            <section class="competence-section glass-card" id="c1" style="padding: 2rem;">
+                <div class="competence-header">
+                    <div class="competence-number">C1</div>
+                    <div>
+                        <h2 class="competence-title">Réaliser un développement d'application</h2>
+                        <span class="niveau-badge majeure">Compétence Majeure — Niveau 2</span>
+                    </div>
+                </div>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    <em>Développer — c'est-à-dire concevoir, coder, tester et intégrer — une solution informatique pour
+                        un client.</em>
                 </p>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
-                    
-                    <!-- Compétence 4 -->
-                    <div class="glass-card competence-card" style="padding: 2rem;">
-                        <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Gérer</h2>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1.5rem;">Gérer des ressources informatiques</h3>
-                        <div class="level-indicator" style="margin-bottom: 1.5rem;">
-                            <span style="background: var(--primary-color); color: var(--background-dark); padding: 0.2rem 0.8rem; border-radius: 4px; font-weight: bold;">Niveau 2</span>
-                        </div>
-                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-                            Optimiser les ressources informatiques pour répondre aux besoins d'une organisation.
-                        </p>
-                        <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 1.6;">
-                            <li>Configuration de services réseaux</li>
-                            <li>Virtualisation et conteneurisation</li>
-                            <li>Surveillance et maintenance préventive</li>
-                        </ul>
-                    </div>
+                <h3 style="margin-bottom: 0.5rem;">Apprentissages Critiques — Niveau 2</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;"><em>Partir des exigences et
+                        aller jusqu'à une application complète</em></p>
+                <table class="ac-table">
+                    <thead>
+                        <tr>
+                            <th>AC</th>
+                            <th>Intitulé</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac-id">AC1</td>
+                            <td>Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir
+                                des exigences</td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC2</td>
+                            <td>Appliquer des principes d'accessibilité et d'ergonomie</td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC3</td>
+                            <td>Adopter de bonnes pratiques de conception et de programmation</td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC4</td>
+                            <td>Vérifier et valider la qualité de l'application par les tests</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                    <!-- Compétence 5 -->
-                    <div class="glass-card competence-card" style="padding: 2rem;">
-                        <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Conduire</h2>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1.5rem;">Conduire un projet</h3>
-                        <div class="level-indicator" style="margin-bottom: 1.5rem;">
-                            <span style="background: var(--primary-color); color: var(--background-dark); padding: 0.2rem 0.8rem; border-radius: 4px; font-weight: bold;">Niveau 2</span>
-                        </div>
-                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-                            Appréhender et manager les étapes d'un projet informatique au sein d'une équipe.
-                        </p>
-                        <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 1.6;">
-                            <li>Planification et suivi (Méthodes Agiles)</li>
-                            <li>Rédaction de documentations techniques</li>
-                            <li>Gestion des risques et des délais</li>
-                        </ul>
-                    </div>
-
-                    <!-- Compétence 6 -->
-                    <div class="glass-card competence-card" style="padding: 2rem;">
-                        <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Collaborer</h2>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1.5rem;">Collaborer au sein d'une équipe informatiques</h3>
-                        <div class="level-indicator" style="margin-bottom: 1.5rem;">
-                            <span style="background: var(--primary-color); color: var(--background-dark); padding: 0.2rem 0.8rem; border-radius: 4px; font-weight: bold;">Niveau 2</span>
-                        </div>
-                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-                            S'intégrer dans un environnement professionnel et contribuer au travail d'équipe.
-                        </p>
-                        <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 1.6;">
-                            <li>Communication technique efficace</li>
-                            <li>Utilisation d'outils collaboratifs (Git, Discord, Trello)</li>
-                            <li>Pair-programming et revue de code</li>
-                        </ul>
-                    </div>
-
+                <div class="argumentation-card">
+                    <h4>🔗 Mise en pratique</h4>
+                    <ul>
+                        <li><strong>SAÉ S2.01 — Pokémon TCG :</strong> En Phase 1, j'ai relié l'ensemble de la logique
+                            métier du jeu de cartes en Java. En Phase 2, j'ai conçu l'interface graphique JavaFX en
+                            implémentant le pattern MVC, les bindings et les écouteurs pour synchroniser les données
+                            avec
+                            la vue.</li>
+                        <li><strong>SAÉ S3.B.01 / S4.B.01 — Enchères sécurisées :</strong> Développement d'une
+                            application client-serveur complète avec une architecture multicouche (client JavaFX,
+                            sockets,
+                            serveur Java, cryptographie RSA puis Damgard-Jurik).</li>
+                        <li><strong>R4.02 — Qualité de développement :</strong> Tests d'intégration, non-régression et
+                            bonnes pratiques CI/CD.</li>
+                    </ul>
                 </div>
             </section>
 
-            <div class="project-footer" style="margin-top: 5rem; text-align: center;">
-                <a href="index.html#projects" class="btn btn-primary">← Retour aux projets</a>
+            <hr class="separator">
+
+            <!-- ================================================================ -->
+            <!--          COMPÉTENCE 2 : OPTIMISER (MINEURE — DÉTAILLÉE)          -->
+            <!-- ================================================================ -->
+            <section class="competence-section glass-card" id="c2" style="padding: 2rem;">
+                <div class="competence-header">
+                    <div class="competence-number">C2</div>
+                    <div>
+                        <h2 class="competence-title">Optimiser des applications</h2>
+                        <span class="niveau-badge">Compétence Mineure — Niveau 2 (acquis final)</span>
+                    </div>
+                </div>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    <em>Proposer des applications informatiques optimisées en fonction de critères spécifiques : temps
+                        d'exécution, précision, consommation de ressources…</em>
+                </p>
+
+                <h3 style="margin-bottom: 0.5rem;">Apprentissages Critiques — Niveau 2</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;"><em>Sélectionner les
+                        algorithmes adéquats pour répondre à un problème donné</em></p>
+                <table class="ac-table">
+                    <thead>
+                        <tr>
+                            <th>AC</th>
+                            <th>Intitulé</th>
+                            <th>Ressources</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac-id">AC1</td>
+                            <td>Choisir des structures de données complexes adaptées au problème</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.02</span>
+                                    <span class="resource-tag">R3.03</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC2</td>
+                            <td>Utiliser des techniques algorithmiques adaptées pour des problèmes complexes (recherche
+                                opérationnelle, méthodes arborescentes, optimisation globale, IA…)</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.02</span>
+                                    <span class="resource-tag">R4.04</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC3</td>
+                            <td>Comprendre les enjeux et moyens de sécurisation des données et du code</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.09</span>
+                                    <span class="resource-tag">R4.B.10</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC4</td>
+                            <td>Évaluer l'impact environnemental et sociétal des solutions proposées</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.08</span>
+                                    <span class="resource-tag">R4.B.09</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 1.5rem 0 0.5rem;">Composantes Essentielles</h3>
+                <ul class="ce-list">
+                    <li><strong>CE1</strong> — En formalisant et modélisant des situations complexes</li>
+                    <li><strong>CE2</strong> — En recensant les algorithmes et les structures de données usuels</li>
+                    <li><strong>CE3</strong> — En s'appuyant sur des schémas de raisonnement</li>
+                    <li><strong>CE4</strong> — En justifiant les choix et validant les résultats</li>
+                </ul>
+
+                <div class="argumentation-card">
+                    <h4>🔗 Preuves d'acquisition</h4>
+                    <ul>
+                        <li><strong>AC1 — Structures de données complexes :</strong>
+                            En <strong>R3.02 (Dév. efficace)</strong>, j'ai étudié et implémenté des arbres (binaires,
+                            de
+                            recherche), des tas (heaps), des listes chaînées, ainsi que les algorithmes de
+                            <em>divide-and-conquer</em> et l'analyse de complexité. J'ai pu choisir les structures les
+                            plus adaptées selon les contraintes du problème (temps d'accès, insertion, tri).
+                        </li>
+                        <li><strong>AC2 — Techniques algorithmiques avancées :</strong>
+                            En <strong>R4.04 (Méthodes d'optimisation)</strong>, j'ai travaillé sur la <em>descente de
+                                gradient</em>, les <em>arbres de décision</em> et l'introduction à la <em>recherche
+                                opérationnelle</em> (résolution graphique de programmes linéaires, couplage). Ces
+                            méthodes permettent de trouver des solutions optimales à des problèmes complexes.
+                        </li>
+                        <li><strong>AC3 — Sécurisation des données et du code :</strong>
+                            En <strong>R3.09 (Cryptographie)</strong> et <strong>R4.B.10 (Cryptographie et
+                                sécurité)</strong>, j'ai étudié le chiffrement RSA (clés publiques/privées, signature),
+                            le hachage, le chiffrement symétrique (AES, DES), les certificats SSL/TLS et l'intégrité des
+                            données.
+                            Dans la <strong>SAÉ S3.B.01</strong>, j'ai directement implémenté le chiffrement RSA côté
+                            client pour sécuriser les enchères de Vickrey, puis en <strong>S4.B.01</strong>, j'ai migré
+                            vers l'algorithme Damgard-Jurik pour du chiffrement homomorphe.
+                        </li>
+                        <li><strong>AC4 — Impact environnemental et sociétal :</strong>
+                            En <strong>R4.B.09 (Management avancé SI)</strong>, j'ai étudié les dimensions
+                            environnementales des systèmes d'information : impact des data centers, stratégies
+                            d'optimisation des ressources, et réflexion sur le Green IT.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="argumentation-card">
+                    <h4>📚 SAÉ mobilisées</h4>
+                    <ul>
+                        <li><strong>S3.B.01</strong> — Création et déploiement de services (enchères sécurisées RSA,
+                            choix d'algorithmes cryptographiques, architecture client-serveur)</li>
+                        <li><strong>S4.B.01</strong> — Déploiement et sécurisation (migration Damgard-Jurik,
+                            virtualisation Docker, sécurisation réseau)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="separator">
+
+            <!-- ================================================================ -->
+            <!--              COMPÉTENCE 3 : ADMINISTRER (MAJEURE)                -->
+            <!-- ================================================================ -->
+            <section class="competence-section glass-card" id="c3" style="padding: 2rem;">
+                <div class="competence-header">
+                    <div class="competence-number">C3</div>
+                    <div>
+                        <h2 class="competence-title">Administrer des systèmes informatiques communicants complexes</h2>
+                        <span class="niveau-badge majeure">Compétence Majeure — Niveau 2</span>
+                    </div>
+                </div>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    <em>Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des
+                        infrastructures, des services et des réseaux.</em>
+                </p>
+
+                <h3 style="margin-bottom: 0.5rem;">Apprentissages Critiques — Niveau 2</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;"><em>Déployer des services
+                        dans une architecture réseau</em></p>
+                <table class="ac-table">
+                    <thead>
+                        <tr>
+                            <th>AC</th>
+                            <th>Intitulé</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac-id">AC1</td>
+                            <td>Concevoir et développer des applications communicantes</td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC2</td>
+                            <td>Utiliser des serveurs et des services réseaux virtualisés</td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC3</td>
+                            <td>Sécuriser les services et données d'un système</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="argumentation-card">
+                    <h4>🔗 Mise en pratique</h4>
+                    <ul>
+                        <li><strong>SAÉ S3.B.01 / S4.B.01 :</strong> Développement d'une application client-serveur
+                            communicante via sockets Java, avec chiffrement RSA puis Damgard-Jurik. Sécurisation des
+                            échanges réseau (SSL, certificats). En S4, mise en place de Docker pour le déploiement.</li>
+                        <li><strong>R3.05 (Prog. système) / R3.06 (Archi. Réseaux) :</strong> Programmation système et
+                            architecture réseau, compréhension des couches TCP/IP.</li>
+                        <li><strong>R4.B.08 (Virtualisation) / R4.B.11 (Réseau avancé) / R4.B.12 (Sécurité sys. et
+                                réseaux) :</strong> Approfondissement de la virtualisation, configuration avancée des
+                            réseaux et politique de sécurité.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="separator">
+
+            <!-- ================================================================ -->
+            <!--           COMPÉTENCE 4 : GÉRER (MINEURE — DÉTAILLÉE)             -->
+            <!-- ================================================================ -->
+            <section class="competence-section glass-card" id="c4" style="padding: 2rem;">
+                <div class="competence-header">
+                    <div class="competence-number">C4</div>
+                    <div>
+                        <h2 class="competence-title">Gérer des données de l'information</h2>
+                        <span class="niveau-badge">Compétence Mineure — Niveau 2 (acquis final)</span>
+                    </div>
+                </div>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    <em>Concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition
+                        toutes les informations pour un bon pilotage de l'entreprise.</em>
+                </p>
+
+                <h3 style="margin-bottom: 0.5rem;">Apprentissages Critiques — Niveau 2</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;"><em>Optimiser une base de
+                        données, interagir avec une application et mettre en œuvre la sécurité</em></p>
+                <table class="ac-table">
+                    <thead>
+                        <tr>
+                            <th>AC</th>
+                            <th>Intitulé</th>
+                            <th>Ressources</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac-id">AC1</td>
+                            <td>Optimiser les modèles de données de l'entreprise</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.07</span>
+                                    <span class="resource-tag">R4.03</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC2</td>
+                            <td>Assurer la confidentialité des données (intégrité et sécurité)</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.09</span>
+                                    <span class="resource-tag">R4.B.10</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC3</td>
+                            <td>Organiser la restitution de données à travers la programmation et la visualisation</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.07</span>
+                                    <span class="resource-tag">R3.08</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC4</td>
+                            <td>Manipuler des données hétérogènes</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.01</span>
+                                    <span class="resource-tag">R4.03</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 1.5rem 0 0.5rem;">Composantes Essentielles</h3>
+                <ul class="ce-list">
+                    <li><strong>CE1</strong> — En respectant les réglementations sur le respect de la vie privée et la
+                        protection des données personnelles</li>
+                    <li><strong>CE2</strong> — En respectant les enjeux économiques, sociétaux et écologiques de
+                        l'utilisation du stockage de données (data centers, cloud, etc.)</li>
+                    <li><strong>CE3</strong> — En s'appuyant sur des bases mathématiques</li>
+                    <li><strong>CE4</strong> — En assurant la cohérence et la qualité</li>
+                </ul>
+
+                <div class="argumentation-card">
+                    <h4>🔗 Preuves d'acquisition</h4>
+                    <ul>
+                        <li><strong>AC1 — Optimiser les modèles de données :</strong>
+                            En <strong>R4.03 (Qualité & non-relationnel)</strong>, j'ai étudié les <em>dépendances
+                                fonctionnelles</em> et leurs différents types (élémentaires, directes, transitives) pour
+                            comprendre la normalisation des bases de données (3NF, BCNF). Cette logique permet de
+                            concevoir des schémas sans duplication ni perte de données.
+                            En <strong>R3.07 (SQL et programmation)</strong>, j'ai pratiqué le SQL avancé et le PL/SQL
+                            avec JDBC pour interagir avec les bases de données depuis Java.
+                        </li>
+                        <li><strong>AC2 — Confidentialité des données :</strong>
+                            En <strong>R3.09</strong> et <strong>R4.B.10 (Cryptographie)</strong>, j'ai étudié le
+                            hachage
+                            (stockage sécurisé des mots de passe), le chiffrement symétrique (AES, DES) et asymétrique
+                            (RSA), ainsi que les protocoles SSL/TLS.
+                            Dans la <strong>SAÉ S3.B.01 (enchères Vickrey)</strong>, j'ai directement implémenté la
+                            sécurisation des données d'enchères : les plis sont chiffrés par RSA côté client avant envoi
+                            au serveur, garantissant la confidentialité. Le RGPD a aussi été abordé en <strong>R3.11
+                                (Droit)</strong>.
+                        </li>
+                        <li><strong>AC3 — Restitution de données :</strong>
+                            En <strong>R3.07 (SQL et programmation)</strong>, j'ai pratiqué des requêtes complexes
+                            (jointures, agrégations, sous-requêtes) avec PL/SQL et JDBC.
+                            En <strong>SAÉ S2.04</strong>, j'ai réalisé un livrable de statistique descriptive et créé
+                            une base de données à partir d'un jeu de données brut (import, nettoyage, requêtes
+                            d'exploitation).
+                        </li>
+                        <li><strong>AC4 — Données hétérogènes :</strong>
+                            En <strong>R4.03</strong>, j'ai été sensibilisé aux paradigmes NoSQL (bases objet, bases
+                            déductives) et à leurs cas d'usage.
+                            En <strong>R3.01 (Dév. web)</strong>, j'ai manipulé des données via APIs REST (JSON, XML) en
+                            complément des bases relationnelles.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="argumentation-card">
+                    <h4>📚 SAÉ mobilisées</h4>
+                    <ul>
+                        <li><strong>S2.04</strong> — Exploitation de base de données (statistiques descriptives,
+                            création et requêtage de BDD avec DBeaver)</li>
+                        <li><strong>S3.B.01</strong> — Enchères sécurisées (gestion des données d'enchères chiffrées
+                            côté serveur)</li>
+                        <li><strong>S4.B.01</strong> — Déploiement/Sécurisation (adaptation de la BDD au chiffrement
+                            Damgard-Jurik)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="separator">
+
+            <!-- ================================================================ -->
+            <!--          COMPÉTENCE 5 : CONDUIRE (MINEURE — DÉTAILLÉE)           -->
+            <!-- ================================================================ -->
+            <section class="competence-section glass-card" id="c5" style="padding: 2rem;">
+                <div class="competence-header">
+                    <div class="competence-number">C5</div>
+                    <div>
+                        <h2 class="competence-title">Conduire un projet</h2>
+                        <span class="niveau-badge">Compétence Mineure — Niveau 2 (acquis final)</span>
+                    </div>
+                </div>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    <em>Satisfaire les besoins des utilisateurs au regard de la chaîne de valeur du client, organiser et
+                        piloter un projet informatique avec des méthodes classiques ou agiles.</em>
+                </p>
+
+                <h3 style="margin-bottom: 0.5rem;">Apprentissages Critiques — Niveau 2</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;"><em>Appliquer une démarche
+                        de suivi de projet en fonction des besoins métiers des clients et des utilisateurs</em></p>
+                <table class="ac-table">
+                    <thead>
+                        <tr>
+                            <th>AC</th>
+                            <th>Intitulé</th>
+                            <th>Ressources</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac-id">AC1</td>
+                            <td>Identifier les processus présents dans une organisation en vue d'améliorer les systèmes
+                                d'information</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.10</span>
+                                    <span class="resource-tag">R4.B.09</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC2</td>
+                            <td>Formaliser les besoins du client et de l'utilisateur</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.03</span>
+                                    <span class="resource-tag">R3.10</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC3</td>
+                            <td>Identifier les critères de faisabilité d'un projet informatique</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.04</span>
+                                    <span class="resource-tag">R4.02</span>
+                                    <span class="resource-tag">R4.B.09</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC4</td>
+                            <td>Définir et mettre en œuvre une démarche de suivi de projet</td>
+                            <td>
+                                <div class="resources-tags">
+                                    <span class="resource-tag">R3.10</span>
+                                    <span class="resource-tag">R3.13</span>
+                                    <span class="resource-tag">R4.B.09</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 1.5rem 0 0.5rem;">Composantes Essentielles</h3>
+                <ul class="ce-list">
+                    <li><strong>CE1</strong> — En communiquant efficacement avec les différents acteurs d'un projet</li>
+                    <li><strong>CE2</strong> — En respectant les règles juridiques et les normes en vigueur</li>
+                    <li><strong>CE3</strong> — En sensibilisant à une gestion éthique, responsable, durable et
+                        interculturelle</li>
+                    <li><strong>CE4</strong> — En adoptant une démarche proactive, créative et critique</li>
+                </ul>
+
+                <div class="argumentation-card">
+                    <h4>🔗 Preuves d'acquisition</h4>
+                    <ul>
+                        <li><strong>AC1 — Processus d'une organisation :</strong>
+                            En <strong>R3.10 et R4.B.09 (Management des SI)</strong>, j'ai étudié les dimensions
+                            technologiques, humaines, organisationnelles et financières des systèmes d'information,
+                            ainsi
+                            que l'alignement stratégique et l'initiation aux PGI (Progiciels de Gestion Intégrés).
+                        </li>
+                        <li><strong>AC2 — Formaliser les besoins :</strong>
+                            En <strong>R3.03 (Analyse)</strong>, j'ai réalisé des <em>diagrammes de classes
+                                d'analyse</em> et des <em>diagrammes états-transitions</em> pour modéliser les besoins
+                            du client. Dans les SAÉ, j'ai formalisé les besoins via des <em>user stories</em> avec
+                            valeur métier et tests d'acceptation.
+                        </li>
+                        <li><strong>AC3 — Faisabilité d'un projet :</strong>
+                            En <strong>R4.02 (Qualité de développement)</strong>, j'ai étudié les critères de
+                            faisabilité
+                            technique d'un projet (tests de non-régression, intégration continue). Dans la
+                            <strong>SAÉ S4.B.01</strong>, j'ai évalué les contraintes techniques (migration RSA →
+                            Damgard-Jurik, mise en place Docker).
+                        </li>
+                        <li><strong>AC4 — Démarche de suivi de projet :</strong>
+                            Dans les <strong>SAÉ S3.B.01 et S4.B.01</strong>, nous avons appliqué la
+                            <strong>méthode Scrum</strong> avec les rôles définis (Scrum Master, Product Owner,
+                            développeurs). Le suivi se faisait via :
+                            <ul>
+                                <li><strong>Trello</strong> — répartition des tâches (user stories avec valeur métier et
+                                    client, descriptions, tests d'acceptation)</li>
+                                <li><strong>GitLab</strong> — gestion du code source, merge requests, branches</li>
+                                <li><strong>Rendus de sprint</strong> — revues de sprint régulières pour montrer
+                                    l'avancement au client</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="argumentation-card">
+                    <h4>📚 SAÉ mobilisées</h4>
+                    <ul>
+                        <li><strong>S3.B.01</strong> — Création et déploiement (méthode Scrum, Trello, GitLab, rendus de
+                            sprint)</li>
+                        <li><strong>S4.B.01</strong> — Déploiement/Sécurisation (continuité de la méthode agile,
+                            évaluation
+                            de faisabilité technique)</li>
+                        <li><strong>Code Game Jam</strong> — Gestion d'équipe sous contrainte de temps extrême (38h),
+                            priorisation des features (MVP), méthode agile improvisée</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="separator">
+
+            <!-- ================================================================ -->
+            <!--              COMPÉTENCE 6 : COLLABORER (MAJEURE)                 -->
+            <!-- ================================================================ -->
+            <section class="competence-section glass-card" id="c6" style="padding: 2rem;">
+                <div class="competence-header">
+                    <div class="competence-number">C6</div>
+                    <div>
+                        <h2 class="competence-title">Collaborer au sein d'une équipe informatique</h2>
+                        <span class="niveau-badge majeure">Compétence Majeure — Niveau 2</span>
+                    </div>
+                </div>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    <em>Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans
+                        une
+                        équipe informatique.</em>
+                </p>
+
+                <h3 style="margin-bottom: 0.5rem;">Apprentissages Critiques — Niveau 2</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;"><em>Situer son rôle et ses
+                        missions au sein d'une équipe informatique</em></p>
+                <table class="ac-table">
+                    <thead>
+                        <tr>
+                            <th>AC</th>
+                            <th>Intitulé</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac-id">AC1</td>
+                            <td>Comprendre la diversité, la structure et la dimension de l'informatique dans une
+                                organisation (ESN, DSI, …)</td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC2</td>
+                            <td>Appliquer une démarche pour intégrer une équipe informatique au sein d'une organisation
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC3</td>
+                            <td>Mobiliser les compétences interpersonnelles pour intégrer une équipe informatique</td>
+                        </tr>
+                        <tr>
+                            <td class="ac-id">AC4</td>
+                            <td>Rendre compte de son activité professionnelle</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="argumentation-card">
+                    <h4>🔗 Mise en pratique</h4>
+                    <ul>
+                        <li><strong>SAÉ S3.B.01 / S4.B.01 :</strong> Travail en équipe Scrum avec des rôles définis,
+                            communication via GitLab (merge requests, code review) et Discord. Résolution de conflits
+                            Git
+                            sur des fichiers complexes. Rendus de sprint et revues de sprint.</li>
+                        <li><strong>SAÉ S2.01 — Pokémon TCG :</strong> Travail en binôme avec répartition des tâches,
+                            pair-programming et sessions de débogage en présentiel.</li>
+                        <li><strong>Code Game Jam :</strong> Gestion des désaccords et médiation dans une équipe de 5
+                            personnes sous pression, communication efficace et adaptabilité.</li>
+                        <li><strong>Nuit de l'Info :</strong> Collaboration en équipe sur un défi algorithmique (Snake
+                            autonome pour le défi NIRD).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer navigation -->
+            <div class="project-footer" style="margin-top: 3rem; text-align: center;">
+                <a href="index.html" class="btn btn-primary">← Retour à l'accueil</a>
             </div>
+
         </div>
     </main>
 
